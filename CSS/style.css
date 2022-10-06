@@ -32,7 +32,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 1366px;
   height: 54px;
   border-bottom: 1px solid var(--border);
   border-radius: 3px;
@@ -114,10 +114,19 @@ section {
   border-radius: 3px;
   overflow: hidden;
   background-color: #ffffff;
+  position: relative;
+}
+
+.container-story ion-icon {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  text-shadow: 5px 5px 16px var(--shadow);
+  background-color: transparent;
 }
 
 .story-content {
-  padding: 0px 8px;
+  padding: 0px 7px;
 }
 
 .story-image {
@@ -136,6 +145,10 @@ section {
 .story-content p {
   text-align: center;
   user-select: none;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400px;
+  color: var(--primary-text);
 }
 
 .container-post {
@@ -200,10 +213,36 @@ aside {
   padding: 0px 8px;
 }
 
+.aside-suggestion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+  padding: 0px 8px;
+}
+
+.aside-suggestion span {
+  color: var(--secondary-text);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.aside-suggestion button {
+  color: var(primary-text);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .aside-profiles button {
   border: none;
   background-color: transparent;
   color: var(--follow-color);
+  cursor: pointer;
 }
 
 .aside-profiles-username {
@@ -211,7 +250,6 @@ aside {
   align-items: center;
   cursor: pointer;
 }
-
 .aside-profiles-username img {
   margin-right: 15px;
 }
@@ -271,7 +309,7 @@ footer {
   }
 }
 
-@media (max-width: 784px) {
+@media (max-width: 810px) {
   aside {
     display: none;
   }
@@ -291,6 +329,15 @@ footer {
   }
 
   header {
+    width: 100%;
+  }
+
+  section {
+    width: 100%;
+    margin-top: 55px;
+  }
+
+  main {
     width: 100%;
   }
 
@@ -324,12 +371,24 @@ footer {
     display: none;
   }
 
-  section {
+  .container {
     width: 100%;
   }
 
-  .container {
+  .post-image img {
     width: 100%;
+  }
+
+  .container-story {
+    background-color: var(--main-background);
+  }
+
+  .container-story ion-icon {
+    display: none;
+  }
+
+  .container-post {
+    margin-top: -2px;
   }
 }
 /*
@@ -340,11 +399,4 @@ ion-icon {
   font-size: 22px;
   color: var(--icon-color);
   cursor: pointer;
-}
-
-.secondary-text {
-  color: var(--secondary-text);
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
 }
