@@ -40,6 +40,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
 .container-header {
@@ -78,6 +79,10 @@ header {
   font-size: 12px;
   line-height: 14px;
   background-color: #fafafa;
+}
+
+.header-search input:focus {
+  outline: none;
 }
 
 .header-search input::placeholder {
@@ -120,14 +125,18 @@ section {
 
 .container-story ion-icon {
   position: absolute;
-  top: 40%;
+  top: 31%;
   right: 0;
-  text-shadow: 5px 5px 16px var(--shadow);
-  background-color: transparent;
+  color: #ffffff;
+  font-size: 28px;
+}
+
+.container-story ion-icon:hover {
+  opacity: 0.7;
 }
 
 .story-content {
-  padding: 0px 7px;
+  padding: 0px 8px;
 }
 
 .story-image {
@@ -141,6 +150,12 @@ section {
   border-radius: 50%;
   background: radial-gradient(rgb(0, 0, 0, 0.15) 60%, transparent 0%),
     radial-gradient(white 65%, transparent 0%), linear-gradient(to top right, orange, deeppink);
+}
+
+.story-image img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
 }
 
 .story-content p {
@@ -255,6 +270,11 @@ aside {
   margin-right: 15px;
 }
 
+.username-image {
+  width: 60px;
+  border-radius: 50%;
+}
+
 .aside-profiles-username p:nth-child(1) {
   color: var(--primary-text);
   font-weight: 500;
@@ -267,6 +287,7 @@ aside {
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
+  margin-top: 2px;
 }
 
 /*
@@ -321,12 +342,7 @@ footer {
 }
 
 @media (max-width: 614px) {
-  aside {
-    display: none;
-  }
-
   section {
-    width: 100%;
     margin-top: 55px;
   }
 
@@ -382,6 +398,7 @@ footer {
 
   .container-post {
     margin-top: -2px;
+    margin-bottom: 26px;
   }
 }
 /*
@@ -392,4 +409,8 @@ ion-icon {
   font-size: 22px;
   color: var(--icon-color);
   cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.7;
 }
