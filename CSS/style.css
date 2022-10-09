@@ -116,7 +116,7 @@ section {
   align-items: center;
   width: 614px;
   height: 118px;
-  border: solid 1px var(--border);
+  border: solid 1px vapost-footer-buttonr(--border);
   border-radius: 3px;
   overflow: hidden;
   background-color: #ffffff;
@@ -268,12 +268,16 @@ section {
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
 }
 .post-footer-input button:hover {
   color: #0095f6;
+}
+
+.post-footer-button {
+  margin: 10px 0px 4px 15px;
+  color: var(--secondary-text);
+  font-size: 14px;
+  line-height: 16px;
 }
 
 /*
@@ -325,16 +329,10 @@ aside {
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
 }
 
 .aside-profiles button {
-  border: none;
-  background-color: transparent;
   color: var(--follow-color);
-  cursor: pointer;
 }
 
 .aside-profiles-username {
@@ -471,6 +469,10 @@ footer {
     width: 100%;
   }
 
+  .post-footer-input {
+    display: none;
+  }
+
   .container-story {
     background-color: var(--main-background);
   }
@@ -496,6 +498,12 @@ ion-icon {
 
 ion-icon:hover {
   opacity: 0.7;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 button:hover {
