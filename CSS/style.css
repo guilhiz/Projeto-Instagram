@@ -116,7 +116,7 @@ section {
   align-items: center;
   width: 614px;
   height: 118px;
-  border: solid 1px vapost-footer-buttonr(--border);
+  border: solid 1px var(--border);
   border-radius: 3px;
   overflow: hidden;
   background-color: #ffffff;
